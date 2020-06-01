@@ -1,0 +1,127 @@
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Hamala Library
+        </title>
+        
+    </head>
+    <style>
+        h1 {
+            opacity: 0.75;
+            color: rgb(255, 255, 255);
+            margin-top: 5%; 
+            margin-left: 5%;
+            font-size: 300%;
+        }
+        h2 {
+            margin-left: 10%;
+            color:white;
+            float:left;
+            font-size: 200%;
+        }
+        div {
+            background-color:rgb(116, 50, 38);
+            opacity:0.7;
+            float:right; 
+            color:rgb(255, 249, 249);
+            width:30%;
+            height:80%;
+            margin-right: 13%;
+        }
+        fieldset {
+            height:94%;
+            margin-top: 3%;
+            margin-left: 3%;
+            margin-right: 4%;
+        }
+        body 
+        {
+            background-image:url(library.jpg);
+        }
+        @media screen and (max-width:1000px)
+        {
+            h1 {
+            opacity: 0.75;
+            color: rgb(255, 255, 255);
+            margin-top: 5%; 
+            margin-left: 2%;
+            font-size: 150%;
+        }
+        h2 {
+            margin-left: 5%;
+            margin-top: 5px;
+            color:white;
+            float:left;
+            font-size: 100%;
+        }
+        div {
+            background-color:rgb(116, 50, 38);
+            opacity:0.7;
+            float:right; 
+            color:rgb(255, 249, 249);
+            width:60%;
+            height:95%;
+            margin-right: 110px;
+        }
+        fieldset {
+            height: 96%;
+            width: 40%;
+            margin-top: 3%;
+            margin-left: 3%;
+            margin-right: 3%;
+        }
+        body 
+        {
+            background-image:url(library.jpg);
+            background-size: cover;
+        }
+        }
+    </style>
+    <body>
+        
+        <h1>
+            Welcome to Hamala Library
+        </h1>
+        <h2  onmouseover="mouseOn(this)" onmouseout="mouseOut(this)">Biggest collection of books are here. :)</h2>
+         <div>
+            <fieldset>
+                <legend>Registration form</legend>
+                <form onSubmit="message()" action="books.html" >
+                E-mail:<br>
+                <input type="email" name="email" required><br><br>
+                First name:<br>
+                <input type="text" name="firstname" required><br><br>
+                Last name:<br>
+                <input type="text" name="lastname" required><br><br>
+                Address:<br>
+                <input type="text" name="address" required><br><br>
+                Phone number:<br>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" required><br><br>
+                Password:<br>
+                <input type="password" name="pass" pattern="(?!.\s)(?=.*[A-Z]).{1}(?=.*[-,_,#,&,])(?=.*\d)(?=.*[a-z]).{7}" required><br>
+                "The password must contain 8 characters that consists <br>
+                of Capital letter for the first character <br> and Capital and Small letters, numbers and special characters"<br><br>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label><br><br>
+                <input type="submit" value="Register">
+                </form>
+            </fieldset>
+         </div>
+         <script>
+             function mouseOn(obj)
+             {
+                 obj.innerHTML = "Sign up and take a look!"
+             }
+             function mouseOut(obj)
+             {
+                 obj.innerHTML = "Biggest collection of books are here. :)"
+             }
+             function message() {
+             alert("Welcome To Hamala Library! you have already signed up :)");
+             }
+         </script>
+    </body>
+</html>
