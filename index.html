@@ -99,7 +99,7 @@
                 Phone number:<br>
                 <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" required><br><br>
                 Password:<br>
-                <input type="password" name="pass" pattern="(?!.\s)(?=.*[A-Z]).{1}(?=.*[-,_,#,&,])(?=.*\d)(?=.*[a-z]).{7}" required><br>
+                <input type="password" name="pass" pattern="(?=.*[A-Z])(?=.*\d)(?=.*[-,_,#,&,!])(?!.*\s)(?=.*[a-z]).{8}" required><br>
                 "The password must contain 8 characters that consists <br>
                 of Capital letter for the first character <br> and Capital and Small letters, numbers and special characters"<br><br>
                 <input type="radio" id="male" name="gender" value="male" required>
